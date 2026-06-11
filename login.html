@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso - ConectaSangue ABC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="main-header"></header>
+
+    <main id="app">
+        <section id="auth-section">
+            <div class="auth-container">
+                <div id="auth-tabs" class="auth-tabs">
+                    <button id="tab-login" class="tab-btn active">Login</button>
+                    <button id="tab-register" class="tab-btn">Criar Conta</button>
+                </div>
+
+                <!-- Form Login -->
+                <form id="login-form">
+                    <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">Acesse sua Conta</h2>
+                    <div class="form-group">
+                        <label for="login-email">E-mail:</label>
+                        <input type="email" id="login-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Senha:</label>
+                        <div class="input-group">
+                            <input type="password" id="login-password" name="password" required>
+                            <button type="button" class="toggle-password" data-target="login-password">Ver</button>
+                        </div>
+                    </div>
+                    <button type="submit" style="width: 100%;">Entrar</button>
+                </form>
+
+                <!-- Form Cadastro -->
+                <form id="register-form" style="display: none;">
+                    <h2 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">Crie sua Conta</h2>
+                    <div class="form-group">
+                        <label for="reg-email">E-mail:</label>
+                        <input type="email" id="reg-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Senha:</label>
+                        <div class="input-group">
+                            <input type="password" id="reg-password" name="password" required>
+                            <button type="button" class="toggle-password" data-target="reg-password">Ver</button>
+                        </div>
+                        <small style="display: block; margin-top: 0.25rem; color: #666; font-size: 0.8rem;">Mínimo de 6 caracteres e pelo menos 1 número.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirmar Senha:</label>
+                        <div class="input-group">
+                            <input type="password" id="reg-confirm-password" name="confirm-password" required>
+                            <button type="button" class="toggle-password" data-target="reg-confirm-password">Ver</button>
+                        </div>
+                    </div>
+                    <button type="submit" style="width: 100%;">Cadastrar</button>
+                </form>
+
+                <p id="auth-msg" style="margin-top: 1.5rem; display: none; text-align: center; font-weight: bold;"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer"></footer>
+
+    <script src="js/shared.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
