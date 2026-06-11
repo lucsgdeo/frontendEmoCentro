@@ -1,3 +1,5 @@
+const API_BASE_URL = 'https://backendemocentro.onrender.com';
+
 document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
     renderFooter();
@@ -9,7 +11,7 @@ function renderHeader() {
     
     header.innerHTML = `
         <div class="logo">
-            <h2>ConectaSangue ABC</h2>
+            <h2>EmoCentro</h2>
         </div>
         <nav>
             <a href="index.html">Home</a>
@@ -34,7 +36,7 @@ function renderHeader() {
 function renderFooter() {
     const footer = document.getElementById('main-footer');
     footer.innerHTML = `
-        <p>&copy; 2026 ConectaSangue ABC - Foco Diadema-SP. Todos os direitos reservados.</p>
+        <p>&copy; 2026 EmoCentro - Doação de Sangue. Todos os direitos reservados.</p>
         <p>Apoie a causa. Doe sangue, salve vidas.</p>
     `;
 }

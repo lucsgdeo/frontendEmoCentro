@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:3000/api';
+// Usando API_BASE_URL definido em shared.js
+const API_URL = `${API_BASE_URL}/api`;
 let map;
 let markers = [];
 
