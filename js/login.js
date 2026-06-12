@@ -68,7 +68,7 @@ function setupLoginForm() {
             const data = await response.json();
 
             if (response.ok) {
-                localStorage.setItem('token', data.token);
+                localStorage.setItem('userEmail', data.user.email);
                 localStorage.setItem('user', JSON.stringify(data.user));
                 window.location.href = 'index.html';
             } else {

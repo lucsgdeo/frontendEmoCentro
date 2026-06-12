@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderHeader() {
     const header = document.getElementById('main-header');
-    const isLoggedIn = !!localStorage.getItem('token');
+    const isLoggedIn = !!localStorage.getItem('userEmail');
     
     header.innerHTML = `
         <div class="logo">
@@ -27,7 +27,8 @@ function renderHeader() {
     if (isLoggedIn) {
         document.getElementById('logout-btn').addEventListener('click', (e) => {
             e.preventDefault();
-            localStorage.removeItem('token');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('user');
             window.location.href = 'index.html';
         });
     }
