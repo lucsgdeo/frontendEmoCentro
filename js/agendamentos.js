@@ -60,8 +60,8 @@ function renderAgendamentos(list) {
             <p><strong>Data:</strong> ${formatDate(a.data)}</p>
             <p><strong>Horário:</strong> ${a.horario}</p>
             <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
-                <button onclick="openReagendar(${a.id}, '${a.data}', '${a.horario}')" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Reagendar</button>
-                <button onclick="confirmarCancelamento(${a.id})" style="background-color: #777; font-size: 0.9rem; padding: 0.5rem 1rem;">Cancelar</button>
+                <button onclick="openReagendar('${a._id}', '${a.data}', '${a.horario}')" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Reagendar</button>
+                <button onclick="confirmarCancelamento('${a._id}')" style="background-color: #777; font-size: 0.9rem; padding: 0.5rem 1rem;">Cancelar</button>
             </div>
         `;
         container.appendChild(card);
