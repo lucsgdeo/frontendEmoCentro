@@ -49,6 +49,7 @@ function setupForm() {
         const horario = document.getElementById('horario').value;
         const msg = document.getElementById('booking-msg');
         const token = localStorage.getItem('token');
+        const userEmail = localStorage.getItem('userEmail');
 
         try {
             const response = await fetch(`${API_URL}/agendamentos`, {
@@ -57,7 +58,7 @@ function setupForm() {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify({ hemocentroId, data, horario })
+                body: JSON.stringify({ hemocentroId, data, horario, userEmail })
             });
 
             const result = await response.json();

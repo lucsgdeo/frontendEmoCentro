@@ -27,7 +27,8 @@ async function fetchAgendamentos() {
         if (!respHemo.ok) throw new Error('Falha ao carregar hemocentros');
         allHemocentros = await respHemo.json();
 
-        const response = await fetch(`${API_URL}/agendamentos`, {
+        const userEmail = localStorage.getItem('userEmail');
+        const response = await fetch(`${API_URL}/agendamentos?userEmail=${userEmail}`, {
             headers: { 'Authorization': `Bearer ${token}` }
         });
 
