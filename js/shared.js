@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://backendconectadoa.onrender.com';
+const API_BASE_URL = 'https://backendemocentro.onrender.com';
 
 document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
