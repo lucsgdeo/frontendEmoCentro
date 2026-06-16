@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://backendemocentro.onrender.com';
+const API_BASE_URL = 'https://backendconectadoa.onrender.com';
 
 document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
@@ -11,7 +11,7 @@ function renderHeader() {
     
     header.innerHTML = `
         <div class="logo">
-            <h2>EmoCentro</h2>
+            <h2>ConectaDoa</h2>
         </div>
         <nav>
             <a href="index.html">Home</a>
@@ -37,7 +37,7 @@ function renderHeader() {
 function renderFooter() {
     const footer = document.getElementById('main-footer');
     footer.innerHTML = `
-        <p>&copy; 2026 EmoCentro - Doação de Sangue. Todos os direitos reservados.</p>
+        <p>&copy; 2026 ConectaDoa - Doação de Sangue. Todos os direitos reservados.</p>
         <p>Apoie a causa. Doe sangue, salve vidas.</p>
     `;
 }
