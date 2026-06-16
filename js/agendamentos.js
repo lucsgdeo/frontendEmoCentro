@@ -115,8 +115,9 @@ async function handleReagendar(e) {
 async function confirmarCancelamento(id) {
     if (confirm('Tem certeza que deseja cancelar este agendamento?')) {
         const token = localStorage.getItem('token');
+        const userEmail = localStorage.getItem('userEmail');
         try {
-            const response = await fetch(`${API_URL}/agendamentos/${id}`, {
+            const response = await fetch(`${API_URL}/agendamentos/${id}?userEmail=${userEmail}`, {
                 method: 'DELETE',
                 headers: { 'Authorization': `Bearer ${token}` }
             });
