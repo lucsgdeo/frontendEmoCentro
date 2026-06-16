@@ -53,11 +53,10 @@ function renderAgendamentos(list) {
     }
 
     list.forEach(a => {
-        const hemocentro = allHemocentros.find(h => h.id == a.hemocentroId);
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <h3>${hemocentro ? hemocentro.nome : 'Hemocentro Desconhecido'}</h3>
+            <h3>${a.hemocentroNome || 'Hemocentro Desconhecido'}</h3>
             <p><strong>Data:</strong> ${formatDate(a.data)}</p>
             <p><strong>Horário:</strong> ${a.horario}</p>
             <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
